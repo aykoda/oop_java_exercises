@@ -1,6 +1,6 @@
 package com.techreturners.cats;
 
-public interface ICat {
+public interface Cats {
 
     public String getSetting();
     public int getAverageHeight();

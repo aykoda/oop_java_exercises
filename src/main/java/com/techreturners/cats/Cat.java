@@ -1,10 +1,37 @@
 package com.techreturners.cats;
 
-public abstract class Cat implements ICat{
+public abstract class Cat implements Cats {
 
     private boolean isAsleep= false;
+    private int averageHeight;
+    private String setting;
+    private String eatResult;
 
-    public abstract String eat();
+    public Cat( String eatResult){
+        this.eatResult = eatResult;
+    }
+    public Cat(int averageHeight, String eatResult){
+        this.averageHeight = averageHeight;
+        this.eatResult = eatResult;
+    }
+    public Cat(int averageHeight, String setting, String eatResult){
+        this.averageHeight = averageHeight;
+        this.setting = setting;
+        this.eatResult = eatResult;
+    }
+
+    public String eat(){ return eatResult;}
+
+    public  int getAverageHeight(){
+        return averageHeight;
+    };
+
+    public String getSetting(){
+        return setting;
+    }
+    public void setSetting(String setting){
+        this.setting = setting;
+    }
 
     public boolean  isAsleep(){
         //false by default
@@ -21,11 +48,5 @@ public abstract class Cat implements ICat{
         isAsleep = false;
     };
 
-    public  int getAverageHeight(){
-        return 0;
-    };
 
-    public String getSetting(){
-        return "";
-    }
 }
